@@ -53,7 +53,8 @@ const Login = () => {
             const result = await signInWithGoogle();
 
             // get token
-            await getToken(result?.user?.email);
+            const token = await getToken(result?.user?.email);
+            console.log(token);
 
             // others
             setGooglePending(false);

@@ -2,15 +2,17 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CiMenuFries } from "react-icons/ci";
 import UseAuth from '../../../Hooks/UseAuth';
+import toast from 'react-hot-toast';
 
 
 const MenuDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const { user, loading, logOut } = UseAuth();
+  const { user, logOut } = UseAuth();
 
   const handleLogOut = () => {
     logOut();
+    toast.success('Log Out Successful!!!');
   }
 
 

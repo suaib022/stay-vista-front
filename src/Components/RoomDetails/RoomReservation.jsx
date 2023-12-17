@@ -15,8 +15,6 @@ const RoomReservation = ({ room }) => {
         key: 'selection'
     })
 
-    console.log(value);
-
     return (
         <div className='rounded-xl border-[1px] border-neutral-200 overflow-hidden bg-white'>
             <div className='flex items-center gap-1 p-4'>
@@ -24,7 +22,7 @@ const RoomReservation = ({ room }) => {
                 <div className='font-light text-neutral-600'>Night</div>
             </div>
             <hr />
-            <Calender></Calender>
+            <Calender value={value}></Calender>
             <hr />
             <div className='p-4'>
                 <Button label={'Reserve'}></Button>
